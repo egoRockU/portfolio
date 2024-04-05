@@ -1,0 +1,23 @@
+{
+  "FirstStep": {
+    "description": "An online profile and portfolio building system for fresh graduates featuring automatic resume and portfolio template which could help them appear in the radar of potential employers.",
+    "toolsUsed": "MongoDB, ExpressJS, ReactJS, NodeJS",
+    "projectWebsite": "https://firststep-ts.vercel.app/",
+    "type": "web",
+    "image": "FirstStep.PNG"
+  },
+  "BentaBounce": {
+    "description": "E-commerce website created using ReactJS and PHP.\nA playful combination of \"Benta\" (sale) and \"Bounce\" (leave), embodies its core values of promoting a bustling and dynamic online marketplace. In BentaBounce, everyone has the right to sell items of their choice and buy the items that pique their curiosity.",
+    "toolsUsed": "ReacJS and PHP ",
+    "projectWebsite": "https://bentabounce.vercel.app/",
+    "type": "web",
+    "image": "BentaBounce.PNG"
+  },
+  "GearList": {
+    "description": "Musical Instrument rating site created in Django.",
+    "toolsUsed": "Django and Bootstrap",
+    "projectWebsite": "https://gearlist.pythonanywhere.com/",
+    "type": "web",
+    "image": "GearList.PNG"
+  }
+}

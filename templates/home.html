@@ -67,6 +67,30 @@
       <p class="mb-4 text-accent hover:cursor-pointer hover:underline">
         <a href="{{ url_for('skills') }}">View Skillset</a>
       </p>
+      <div class="mt-12">
+        <div class="w-fit h-fit flex items-center pb-2">
+          <div class="bg-accent w-1 self-stretch rounded"></div>
+          <h1 class="text-4xl pl-2">Projects</h1>
+        </div>
+        {% for project, attrib in obj.items() %}
+        <div class="my-7">
+          <div class="mockup-browser border border-base-300">
+            <div class="mockup-browser-toolbar">
+              <div class="input border border-base-300">
+                <a href="{{attrib.projectWebsite}}">
+                  {{ attrib.projectWebsite }}
+                </a>
+              </div>
+            </div>
+            <div class="flex justify-center border-t border-base-300">
+              <img
+                src="{{ url_for('static', filename='images/' + attrib.image) }}"
+              />
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </body>
 </html>
