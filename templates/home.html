@@ -1,18 +1,10 @@
 {% import "_macros.html" as macros %}
 <!DOCTYPE html>
 <html lang="en" data-theme="mydark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link
-      href="{{ url_for('static', filename='css/output.css') }}"
-      rel="stylesheet"
-    />
-  </head>
+  {{ macros.head() }}
   <body>
     <div
-      class="container max-w-6xl mx-auto mt-5 px-16 border-x-2 border-neutral"
+      class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
     >
       <nav class="flex items-center justify-between">{{ macros.navbar() }}</nav>
       <div class="container py-11">
@@ -73,7 +65,7 @@
         Phasellus viverra aliquet felis varius consequat. 
       </p>
       <p class="mb-4 text-accent hover:cursor-pointer hover:underline">
-        View Skillset
+        <a href="{{ url_for('skills') }}">View Skillset</a>
       </p>
     </div>
   </body>

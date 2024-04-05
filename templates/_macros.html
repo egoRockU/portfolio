@@ -1,8 +1,21 @@
-{% macro navbar() %}
+{% macro head() %}
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link
+    href="{{ url_for('static', filename='css/output.css') }}"
+    rel="stylesheet"
+  />
+  <script src="{{ url_for('static', filename='lib/htmx.min.js') }}"></script>
+</head>
+{% endmacro %} {% macro navbar(title) %}
 <div class="text-sm breadcrumbs">
   <ul>
-    <li><a>Home</a></li>
-    <li><a>Skills</a></li>
+    <li><a href="{{ url_for('home') }}">Home</a></li>
+    {% if title == "Skills" %}
+    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+    {% endif %}
   </ul>
 </div>
 <div>

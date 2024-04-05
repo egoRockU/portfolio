@@ -1,0 +1,35 @@
+{% import "_macros.html" as macros with context %}
+<!DOCTYPE html>
+<html lang="en" data-theme="mydark">
+  {{ macros.head() }}
+  <body>
+    <div
+      class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
+    >
+      <nav class="flex items-center justify-between">
+        {{ macros.navbar(title=obj.title) }}
+      </nav>
+      <div class="container py-11">
+        <div class="w-fit">
+          <h1 class="text-4xl pb-1">Skills</h1>
+          <div class="bg-accent h-1 rounded"></div>
+        </div>
+      </div>
+      {% for skill, items in obj.skills.items() %}
+      <div class="flex flex-col pb-8">
+        <div class="w-fit h-fit flex items-center pb-2">
+          <div class="bg-accent w-1 self-stretch rounded"></div>
+          <h1 class="text-3xl pl-2">{{ skill }}</h1>
+        </div>
+        <div>
+          <ul class="ml-9 list-disc">
+            {% for item in items %}
+            <li class="text-lg">{{ item }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "Preferred Languages": ["Javascript", "Python", "Java"],
+  "Other Known Languages": ["PHP", "C/C++", "Typescript", "VisualBasic"],
+  "Web Frameworks/Libraries": [
+    "ReactJS",
+    "NodeJS",
+    "ExpressJS",
+    "Django",
+    "Flask",
+    "HTMX"
+  ],
+  "Databases": ["MongoDB", "MySQL", "SQLite"],
+  "Others": ["Figma", "Firebase", "XAMPP", "Android Studio"]
+}
