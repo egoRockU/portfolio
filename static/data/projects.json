@@ -9,7 +9,7 @@
   },
   "BentaBounce": {
     "description": "E-commerce website created using ReactJS and PHP.\nA playful combination of \"Benta\" (sale) and \"Bounce\" (leave), embodies its core values of promoting a bustling and dynamic online marketplace. In BentaBounce, everyone has the right to sell items of their choice and buy the items that pique their curiosity.",
-    "toolsUsed": "ReacJS and PHP ",
+    "toolsUsed": "ReactJS and PHP ",
     "projectWebsite": "https://bentabounce.vercel.app/",
     "githubLink": "https://github.com/egoRockU/BentaBounce-Frontend",
     "type": "web",

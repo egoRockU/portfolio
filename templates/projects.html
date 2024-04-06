@@ -18,7 +18,15 @@
           <label
             class="input input-bordered rounded-full flex items-center gap-2"
           >
-            <input type="text" class="grow" placeholder="Search" />
+            <input
+              hx-post="{{ url_for('get_projects') }}"
+              hx-trigger="keyup delay:200ms changed"
+              hx-target="#item"
+              type="text"
+              class="grow"
+              placeholder="Search"
+              name="entry"
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"

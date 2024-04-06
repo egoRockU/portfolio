@@ -1,6 +1,7 @@
 import os
-from flask import Flask, render_template, json, url_for
+from flask import Flask, render_template, json, request
 from flask.views import View
+from utils.search import search
 
 app = Flask(__name__)
 
@@ -28,14 +29,17 @@ def skills():
 def projects():
     return render_template('projects.html', title="Projects")
 
-@app.route("/getprojects")
+@app.route("/getprojects", methods = ['GET', 'POST'])
 def get_projects():
     file = os.path.join(app.static_folder, 'data', 'projects.json')
     with open(file) as test_file:
-        data = json.load(test_file)
-    print(data)
+        projects = json.load(test_file)
 
-    return render_template('projectsView.html', projects=data)
+    if request.method == 'POST':
+        entry = request.form['entry']
+        projects = search(projects, entry)
+
+    return render_template('projectsView.html', projects=projects)
 
 if __name__ == '__main__':
     app.run(debug=True)
