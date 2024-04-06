@@ -1,4 +1,4 @@
-{% import "_macros.html" as macros %}
+{% import "_macros.html" as macros with context %}
 <!DOCTYPE html>
 <html lang="en" data-theme="mydark">
   {{ macros.head() }}
@@ -72,24 +72,17 @@
           <div class="bg-accent w-1 self-stretch rounded"></div>
           <h1 class="text-4xl pl-2">Projects</h1>
         </div>
-        {% for project, attrib in obj.items() %}
-        <div class="my-7">
-          <div class="mockup-browser border border-base-300">
-            <div class="mockup-browser-toolbar">
-              <div class="input border border-base-300">
-                <a href="{{attrib.projectWebsite}}">
-                  {{ attrib.projectWebsite }}
-                </a>
-              </div>
+        {% for project, attrib in obj.items() %} {{
+        macros.project_display(attrib) }} {% endfor %}
+        <div class="flex items-center justify-center">
+          <a href="{{ url_for('projects') }}">
+            <div class="flex items-center flex-row">
+              <hr class="w-20 mr-2 border-accent" />
+              <p class="text-lg text-accent">View More</p>
+              <hr class="w-20 ml-2 border-accent" />
             </div>
-            <div class="flex justify-center border-t border-base-300">
-              <img
-                src="{{ url_for('static', filename='images/' + attrib.image) }}"
-              />
-            </div>
-          </div>
+          </a>
         </div>
-        {% endfor %}
       </div>
     </div>
   </body>

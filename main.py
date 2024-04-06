@@ -10,7 +10,6 @@ def home():
     with open(file) as test_file:
         data = json.load(test_file)
     threeProj = { k: data[k] for k in list(data.keys())[:3] }
-    print(data)
     return render_template("home.html", obj=threeProj)
 
 @app.route("/skills")
@@ -27,7 +26,16 @@ def skills():
 
 @app.route("/projects")
 def projects():
-    return render_template('projects.html')
+    return render_template('projects.html', title="Projects")
+
+@app.route("/getprojects")
+def get_projects():
+    file = os.path.join(app.static_folder, 'data', 'projects.json')
+    with open(file) as test_file:
+        data = json.load(test_file)
+    print(data)
+
+    return render_template('projectsView.html', projects=data)
 
 if __name__ == '__main__':
     app.run(debug=True)

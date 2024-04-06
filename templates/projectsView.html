@@ -1,0 +1,51 @@
+{% for title, project in projects.items() %} {% if project.type == 'web' %}
+<div class="flex items-center justify-between flex-col lg:flex-row">
+  <div class="my-7 w-full lg:w-5/12">
+    <div class="mockup-browser border border-base-300">
+      <div class="mockup-browser-toolbar">
+        <div class="input border border-base-300">
+          <a href="{{ project.projectWebsite }}">
+            {{ project.projectWebsite }}
+          </a>
+        </div>
+      </div>
+      <div class="flex justify-center border-t border-base-300">
+        <img src="{{ url_for('static', filename='images/'+ project.image) }}" />
+      </div>
+    </div>
+  </div>
+  <div class="ml-3 w-7/12">
+    <div class="w-fit h-fit flex items-center pb-3">
+      <div class="bg-accent w-1 self-stretch rounded"></div>
+      <h1 class="text-3xl pl-2">{{ title }}</h1>
+    </div>
+    <p class="font-thin pb-3">{{ project.description }}</p>
+    <p class="text-lg">
+      <span class="font-bold">Tools Used:</span>
+      <span class="font-thin italic">{{ project.toolsUsed }}</span>
+    </p>
+  </div>
+</div>
+{% elif project.type == 'mobile' %}
+<div class="flex items-center justify-between flex-col lg:flex-row">
+  <div class="mockup-phone w-80">
+    <div class="camera"></div>
+    <div class="display">
+      <a href="{{ project.projectWebsite }}">
+        <img src="{{ url_for('static', filename='images/'+ project.image) }}" />
+      </a>
+    </div>
+  </div>
+  <div class="ml-3 w-7/12">
+    <div class="w-fit h-fit flex items-center pb-3">
+      <div class="bg-accent w-1 self-stretch rounded"></div>
+      <h1 class="text-3xl pl-2">{{ title }}</h1>
+    </div>
+    <p class="font-thin pb-3">{{ project.description }}</p>
+    <p class="text-lg">
+      <span class="font-bold">Tools Used:</span>
+      <span class="font-thin italic">{{ project.toolsUsed }}</span>
+    </p>
+  </div>
+</div>
+{% endif %} {% endfor %}
