@@ -1,9 +1,12 @@
 import os
 from flask import Flask, render_template, json, request
-from flask.views import View
 from utils.search import search
+from dotenv import load_dotenv
+import requests
 
 app = Flask(__name__)
+load_dotenv()
+app.config['GITHUB_TOKEN'] = os.getenv('GITHUB_TOKEN')
 
 @app.route("/")
 def home():
@@ -40,6 +43,15 @@ def get_projects():
         projects = search(projects, entry)
 
     return render_template('projectsView.html', projects=projects)
+
+@app.route("/getrepos")
+def get_repos():
+    url = 'https://api.github.com/users/egoRockU/repos?sort=pushed'
+    headers = {'Authorization': 'Bearer ' + app.config['GITHUB_TOKEN']}
+    repos = requests.get(url, headers=headers).json()
+    first_five_repos = repos[:5]
+    
+    return render_template('repos.html', repos = first_five_repos)
 
 if __name__ == '__main__':
     app.run(debug=True)

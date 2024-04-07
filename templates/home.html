@@ -2,7 +2,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="mydark">
   {{ macros.head() }}
-  <body>
+  <body
+    hx-get="{{ url_for('get_repos') }}"
+    hx-trigger="load"
+    hx-target="#repos_list"
+  >
     <div
       class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
     >
@@ -70,7 +74,9 @@
       <div class="mt-12">
         <div class="w-fit h-fit flex items-center pb-2">
           <div class="bg-accent w-1 self-stretch rounded"></div>
-          <h1 class="text-4xl pl-2">Projects</h1>
+          <h1 class="text-4xl pl-2 hover:underline">
+            <a href="{{ url_for('projects') }}">Projects</a>
+          </h1>
         </div>
         {% for project, attrib in obj.items() %} {{
         macros.project_display(attrib) }} {% endfor %}
@@ -83,6 +89,44 @@
             </div>
           </a>
         </div>
+      </div>
+      <div class="mt-16">
+        <h1 class="text-2xl mb-1">Github Repositories</h1>
+        <p class="font-normal text-neutral">
+          Might indicate projects that I'm currently working on ...
+        </p>
+        <div class="border border-neutral rounded py-5 px-10 mt-5">
+          <div id="repos_list" class="flex flex-col"></div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <h1 class="text-2xl font-semibold mb-3">Contact me @</h1>
+        <div class="flex items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 stroke-accent"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+            />
+          </svg>
+          <a href="mailto:lagutan.gerwin.bscs2021@gmail.com"
+            ><p class="text-lg ml-2 text-accent">
+              lagutan.gerwin.bscs2021@gmail.com
+            </p></a
+          >
+        </div>
+      </div>
+      <div class="flex justify-center mt-52">
+        <p class="text-xl font-thin italic">
+          Made with HTMX, Flask, and instant coffee
+        </p>
       </div>
     </div>
   </body>
