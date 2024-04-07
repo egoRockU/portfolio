@@ -1,6 +1,6 @@
 {% import "_macros.html" as macros with context %}
 <!DOCTYPE html>
-<html lang="en" data-theme="mydark">
+<html lang="en">
   {{ macros.head() }}
   <body
     hx-get="{{ url_for('get_repos') }}"
@@ -11,11 +11,22 @@
       class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
     >
       <nav class="flex items-center justify-between">{{ macros.navbar() }}</nav>
-      <div class="container py-11">
+      <div class="container py-10">
         <div class="flex justify-between">
-          <div class="w-fit">
-            <h1 class="text-4xl pb-3">Gerwin Lagutan</h1>
-            <div class="bg-accent h-1 rounded"></div>
+          <div class="flex items-center">
+            <div class="w-fit">
+              <h1 class="text-4xl pb-3">Gerwin Lagutan</h1>
+              <div class="bg-accent h-1 rounded"></div>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm hover:underline">
+                <a
+                  href="http://ipa-reader.xyz/?text=d%CD%A1%CA%92%C9%9Cr%CB%88w%C9%AAn&voice=Amy"
+                  target="_blank"
+                  >/d͡ʒɜrˈwɪn/</a
+                >
+              </p>
+            </div>
           </div>
           <div class="flex items-center">
             <a
@@ -60,15 +71,14 @@
         </div>
       </div>
       <p class="mb-4">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit
-        tellus, dictum non tristique vel, pellentesque eget justo. Nulla eget
-        enim eget nisi porttitor venenatis vitae vel dolor. Etiam non viverra
-        magna, ut aliquet ligula. Nullam nec est consectetur, varius odio et,
-        varius velit. Maecenas ornare turpis ante, sit amet tincidunt magna
-        iaculis et. Proin ultricies tempor libero, eget porta arcu sagittis a.
-        Phasellus viverra aliquet felis varius consequat. 
+        Hi, I'm a computer science student who enjoy exploring different
+        technologies, tools and paradigms related to software development. I'm
+        currently focusing on
+        <b>Backend Development</b> using the
+        <b>Javascript/Typescript Ecosystem</b> but still likes to wander on
+        simple scripting projects.
       </p>
-      <p class="mb-4 text-accent hover:cursor-pointer hover:underline">
+      <p class="mb-4 text-accent hover:cursor-pointer hover:underline w-fit">
         <a href="{{ url_for('skills') }}">View Skillset</a>
       </p>
       <div class="mt-12">

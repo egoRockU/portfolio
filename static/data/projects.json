@@ -27,6 +27,7 @@
     "description": "Quizzam! is a mobile application software that enables users to quiz themselves on numerous subjects to evaluate their knowledge and assess their level of understanding. This program was made to give users an interactive and fun learning experience. It may cover a wide range of topics, from academics to trivia. With the application, users can track their progress and respond to multiple-choice questions. This app is perfect for users who want to learn while they are on the road and may give them an enjoyable and handy way to brush up on their knowledge or study for tests.",
     "toolsUsed": "Java, Android Studio, and Firebase",
     "projectWebsite": "https://github.com/egoRockU/Quizzam",
+    "githubLink": "https://github.com/egoRockU/Quizzam",
     "type": "mobile",
     "image": "Quizzam.png"
   }
