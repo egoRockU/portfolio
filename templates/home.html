@@ -1,6 +1,6 @@
 {% import "_macros.html" as macros with context %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
   {{ macros.head() }}
   <body
     hx-get="{{ url_for('get_repos') }}"
@@ -10,7 +10,8 @@
     <div
       class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
     >
-      <nav class="flex items-center justify-between">{{ macros.navbar() }}</nav>
+    <div data-theme="{{ obj.theme }}"id="theme"></div>
+      <nav class="flex items-center justify-between">{{ macros.navbar(obj.title, obj.theme) }}</nav>
       <div class="container py-10">
         <div class="flex justify-between">
           <div class="flex items-center">
@@ -75,8 +76,7 @@
         technologies, tools and paradigms related to software development. I'm
         currently focusing on
         <b>Backend Development</b> using the
-        <b>Javascript/Typescript Ecosystem</b> but still likes to wander on
-        simple scripting projects.
+        <b>Javascript/Typescript Ecosystem</b> and have some experience in <b>Frontend Development</b> from doing school and personal projects.
       </p>
       <p class="mb-4 text-accent hover:cursor-pointer hover:underline w-fit">
         <a href="{{ url_for('skills') }}">View Skillset</a>
@@ -88,7 +88,7 @@
             <a href="{{ url_for('projects') }}">Projects</a>
           </h1>
         </div>
-        {% for project, attrib in obj.items() %} {{
+        {% for project, attrib in obj.threeProj.items() %} {{
         macros.project_display(attrib) }} {% endfor %}
         <div class="flex items-center justify-center">
           <a href="{{ url_for('projects') }}">

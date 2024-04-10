@@ -6,8 +6,9 @@
     <div
       class="container max-w-6xl mx-auto my-5 px-16 border-x-2 border-neutral"
     >
+      <div data-theme="{{ obj.theme }}" id="theme"></div>
       <nav class="flex items-center justify-between">
-        {{ macros.navbar(title=obj.title) }}
+        {{ macros.navbar(obj.title, obj.theme) }}
       </nav>
       <div class="container py-11">
         <div class="w-fit">

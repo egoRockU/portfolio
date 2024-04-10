@@ -9,7 +9,7 @@
   />
   <script src="{{ url_for('static', filename='lib/htmx.min.js') }}"></script>
 </head>
-{% endmacro %} {% macro navbar(title) %}
+{% endmacro %} {% macro navbar(title, theme) %}
 <div class="text-sm breadcrumbs">
   <ul>
     <li><a href="{{ url_for('home') }}">Home</a></li>
@@ -23,7 +23,28 @@
 <div>
   <label class="flex cursor-pointer gap-2">
     <span class="label-text">Dark</span>
-    <input type="checkbox" value="mylight" class="toggle theme-controller" />
+    {% if theme == 'mydark' %}
+    <input
+      type="checkbox"
+      value="mylight"
+      class="toggle theme-controller"
+      hx-get="{{ url_for('toggle_theme') }}"
+      hx-trigger="click"
+      hx-swap="outerHTML"
+      hx-target="#theme"
+    />
+    {% elif theme == 'mylight' %}
+    <input
+      type="checkbox"
+      value="mylight"
+      class="toggle theme-controller"
+      hx-get="{{ url_for('toggle_theme') }}"
+      hx-trigger="click"
+      hx-swap="outerHTML"
+      hx-target="#theme"
+      checked
+    />
+    {% endif %}
     <span class="label-text">Light</span>
   </label>
 </div>
