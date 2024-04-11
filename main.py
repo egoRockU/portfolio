@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, json, request, session
+from flask import Flask, render_template, json, request, session, send_file, url_for
 from utils.search import search
 from dotenv import load_dotenv
 import requests
@@ -8,6 +8,7 @@ app = Flask(__name__)
 load_dotenv()
 app.config['GITHUB_TOKEN'] = os.getenv('GITHUB_TOKEN')
 app.secret_key = 'THEME_SECRET_KEY'
+
 
 @app.route("/")
 def home():
@@ -24,7 +25,6 @@ def home():
         'threeProj': threeProj
     }
 
-    print(session['theme'])
     return render_template("home.html", obj=obj)
 
 @app.route("/skills")
