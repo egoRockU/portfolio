@@ -17,11 +17,11 @@
 {% endmacro %} {% macro navbar(title, theme) %}
 <div class="text-sm breadcrumbs">
   <ul>
-    <li><a href="{{ url_for('home') }}">Home</a></li>
+    <li><a href="{{ url_for('main.home') }}">Home</a></li>
     {% if title == "Skills" %}
-    <li><a href="{{ url_for('skills') }}">Skills</a></li>
+    <li><a href="{{ url_for('main.skills') }}">Skills</a></li>
     {% elif title == "Projects" %}
-    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+    <li><a href="{{ url_for('main.projects') }}">Projects</a></li>
     {% endif %}
   </ul>
 </div>
@@ -33,7 +33,7 @@
       type="checkbox"
       value="mylight"
       class="toggle theme-controller"
-      hx-get="{{ url_for('toggle_theme') }}"
+      hx-get="{{ url_for('main.toggle_theme') }}"
       hx-trigger="click"
       hx-swap="outerHTML"
       hx-target="#theme"
@@ -43,7 +43,7 @@
       type="checkbox"
       value="mylight"
       class="toggle theme-controller"
-      hx-get="{{ url_for('toggle_theme') }}"
+      hx-get="{{ url_for('main.toggle_theme') }}"
       hx-trigger="click"
       hx-swap="outerHTML"
       hx-target="#theme"

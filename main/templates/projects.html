@@ -20,7 +20,7 @@
             class="input input-bordered rounded-full flex items-center gap-2"
           >
             <input
-              hx-post="{{ url_for('get_projects') }}"
+              hx-post="{{ url_for('main.get_projects') }}"
               hx-trigger="keyup delay:200ms changed"
               hx-target="#item"
               type="text"
@@ -44,7 +44,7 @@
         </div>
       </div>
       <div
-        hx-get="{{ url_for('get_projects') }}"
+        hx-get="{{ url_for('main.get_projects') }}"
         hx-trigger="load"
         hx-target="#item"
       >

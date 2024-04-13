@@ -3,7 +3,7 @@
 <html lang="en">
   {{ macros.head() }}
   <body
-    hx-get="{{ url_for('get_repos') }}"
+    hx-get="{{ url_for('main.get_repos') }}"
     hx-trigger="load"
     hx-target="#repos_list"
   >
@@ -82,19 +82,19 @@
         <b>Frontend Development</b> from doing school and personal projects.
       </p>
       <p class="mb-4 text-accent hover:cursor-pointer hover:underline w-fit">
-        <a href="{{ url_for('skills') }}">View Skillset</a>
+        <a href="{{ url_for('main.skills') }}">View Skillset</a>
       </p>
       <div class="mt-12">
         <div class="w-fit h-fit flex items-center pb-2">
           <div class="bg-accent w-1 self-stretch rounded"></div>
           <h1 class="text-4xl pl-2 hover:underline">
-            <a href="{{ url_for('projects') }}">Projects</a>
+            <a href="{{ url_for('main.projects') }}">Projects</a>
           </h1>
         </div>
         {% for project, attrib in obj.threeProj.items() %} {{
         macros.project_display(attrib) }} {% endfor %}
         <div class="flex items-center justify-center">
-          <a href="{{ url_for('projects') }}">
+          <a href="{{ url_for('main.projects') }}">
             <div class="flex items-center flex-row">
               <hr class="w-20 mr-2 border-accent" />
               <p class="text-lg text-accent">View More</p>
