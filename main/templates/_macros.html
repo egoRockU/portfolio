@@ -76,4 +76,12 @@
     </div>
   </div>
 </div>
+{% elif project.type == 'window' %}
+<div class="flex justify-center my-7">
+  <div class="mockup-window border border-base-300">
+    <a href="{{ project.projectWebsite }}">
+      <img src="{{ url_for('static', filename='images/'+ project.image) }}" />
+    </a>
+  </div>
+</div>
 {% endif %} {% endmacro %}

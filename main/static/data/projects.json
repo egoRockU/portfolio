@@ -30,5 +30,21 @@
     "githubLink": "https://github.com/egoRockU/Quizzam",
     "type": "mobile",
     "image": "Quizzam.png"
+  },
+  "gl.dev": {
+    "description": "You're looking at it now.",
+    "toolsUsed": "HTMX and Flask",
+    "projectWebsite": "https://gl-dev.onrender.com/",
+    "githubLink": "https://github.com/egoRockU/portfolio",
+    "type": "web",
+    "image": "gl.dev.png"
+  },
+  "Infinite Jump": {
+    "description": "Silly game I made when I was just starting to the basics of programming. It has a joystick/gamepad support.",
+    "toolsUsed": "Pygame",
+    "projectWebsite": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
+    "githubLink": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
+    "type": "window",
+    "image": "InfiniteJump.png"
   }
 }
