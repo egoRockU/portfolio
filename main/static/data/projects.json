@@ -40,7 +40,7 @@
     "image": "gl.dev.png"
   },
   "Infinite Jump": {
-    "description": "Silly game I made when I was just starting to the basics of programming. It has a joystick/gamepad support.",
+    "description": "Silly game I made when I was just starting to learn the basics of programming. It has a joystick/gamepad support.",
     "toolsUsed": "Pygame",
     "projectWebsite": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
     "githubLink": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
