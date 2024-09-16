@@ -1,6 +1,6 @@
 {
-  "Preferred Languages": ["Javascript", "Python", "Java"],
-  "Other Known Languages": ["PHP", "C/C++", "Typescript", "VisualBasic"],
+  "Preferred Languages": ["Javascript/Typescript", "Python", "Java"],
+  "Other Known Languages": ["PHP", "C/C++", "VisualBasic"],
   "Web Frameworks/Libraries": [
     "ReactJS",
     "NodeJS",
@@ -9,6 +9,7 @@
     "Flask",
     "HTMX"
   ],
-  "Databases": ["MongoDB", "MySQL", "SQLite"],
-  "Others": ["Figma", "Firebase", "XAMPP", "Android Studio"]
+  "Mobile Development": ["React Native Expo", "Android Studio"],
+  "Databases": ["MongoDB", "MySQL", "SQLite", "PostgreSQL"],
+  "Others": ["Figma", "Firebase", "Postman"]
 }
