@@ -11,5 +11,5 @@
   ],
   "Mobile Development": ["React Native Expo", "Android Studio"],
   "Databases": ["MongoDB", "MySQL", "SQLite", "PostgreSQL"],
-  "Others": ["Figma", "Firebase", "Postman"]
+  "Others": ["Arduino", "Figma", "Firebase", "Postman", "Google Colab"]
 }

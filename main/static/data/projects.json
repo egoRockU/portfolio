@@ -1,9 +1,17 @@
 {
+  "WEWO": {
+    "description": "WEWO (Water Efficiency with Waste Optimization) is an IoT-powered rainwater purification system designed to tackle water scarcity and plastic waste. It collects and filters rainwater for non-potable use while integrating a reverse vending machine that accepts plastic bottles in exchange for clean water. The system also monitors water quality and collected waste in real-time for efficient operation.",
+    "toolsUsed": "NextJS, Supabase, Flask, SQLite, and ArduinoIDE",
+    "projectWebsite": "https://wewo-website.vercel.app/",
+    "githubLink": ["https://github.com/Lance-07/wewo-website", "https://github.com/egoRockU/WEWO-Server", "https://github.com/egoRockU/wewo-microcontroller-code"],
+    "type": "web",
+    "image": "WEWO.png"
+  },
   "FirstStep": {
     "description": "An online profile and portfolio building system for fresh graduates featuring automatic resume and portfolio template which could help them appear in the radar of potential employers.",
-    "toolsUsed": "MongoDB, ExpressJS, ReactJS, NodeJS",
+    "toolsUsed": "MongoDB, ExpressJS, ReactJS, and NodeJS",
     "projectWebsite": "https://firststep-ts.vercel.app/",
-    "githubLink": "https://github.com/egoRockU/FirstStep",
+    "githubLink": ["https://github.com/egoRockU/FirstStep"],
     "type": "web",
     "image": "FirstStep.png"
   },
@@ -11,7 +19,7 @@
     "description": "E-commerce website created using ReactJS and PHP.\nA playful combination of \"Benta\" (sale) and \"Bounce\" (leave), embodies its core values of promoting a bustling and dynamic online marketplace. In BentaBounce, everyone has the right to sell items of their choice and buy the items that pique their curiosity.",
     "toolsUsed": "ReactJS and PHP ",
     "projectWebsite": "https://bentabounce.vercel.app/",
-    "githubLink": "https://github.com/egoRockU/BentaBounce-Frontend",
+    "githubLink": ["https://github.com/egoRockU/BentaBounce-Frontend"],
     "type": "web",
     "image": "BentaBounce.png"
   },
@@ -19,7 +27,7 @@
     "description": "Musical Instrument rating site created in Django.",
     "toolsUsed": "Django and Bootstrap",
     "projectWebsite": "https://gearlist.pythonanywhere.com/",
-    "githubLink": "https://github.com/egoRockU/gearlist",
+    "githubLink": ["https://github.com/egoRockU/gearlist"],
     "type": "web",
     "image": "GearList.png"
   },
@@ -27,7 +35,7 @@
     "description": "Quizzam! is a mobile application software that enables users to quiz themselves on numerous subjects to evaluate their knowledge and assess their level of understanding. This program was made to give users an interactive and fun learning experience. It may cover a wide range of topics, from academics to trivia. With the application, users can track their progress and respond to multiple-choice questions. This app is perfect for users who want to learn while they are on the road and may give them an enjoyable and handy way to brush up on their knowledge or study for tests.",
     "toolsUsed": "Java, Android Studio, and Firebase",
     "projectWebsite": "https://github.com/egoRockU/Quizzam",
-    "githubLink": "https://github.com/egoRockU/Quizzam",
+    "githubLink": ["https://github.com/egoRockU/Quizzam"],
     "type": "mobile",
     "image": "Quizzam.png"
   },
@@ -35,7 +43,7 @@
     "description": "You're looking at it now.",
     "toolsUsed": "HTMX and Flask",
     "projectWebsite": "https://gl-dev.onrender.com/",
-    "githubLink": "https://github.com/egoRockU/portfolio",
+    "githubLink": ["https://github.com/egoRockU/portfolio"],
     "type": "web",
     "image": "gl.dev.png"
   },
@@ -43,7 +51,7 @@
     "description": "Silly game I made when I was just starting to learn the basics of programming. It has a joystick/gamepad support.",
     "toolsUsed": "Pygame",
     "projectWebsite": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
-    "githubLink": "https://github.com/egoRockU/infinite-jump-w-joystick-support-",
+    "githubLink": ["https://github.com/egoRockU/infinite-jump-w-joystick-support-"],
     "type": "window",
     "image": "InfiniteJump.png"
   }
